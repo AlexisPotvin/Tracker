@@ -4,8 +4,16 @@ __author__ = 'User'
 import GLOBAL
 import time
 
-import Param.paramMain
 
-time.sleep(12)
+from paramClass import Param
+
+param = Param()
+
+GLOBAL.param = param
+
+
+param.start()
+
+
 
 GLOBAL.param.stop()

@@ -11,6 +11,7 @@ class Param(threading.Thread):
         self.loopFrequency = 1  # Hz
         threading.Thread.__init__(self, target=self.main)
         self.__lastLoopTS = time.time()  # time stamp of the beginning of the last main loop
+        self.daemon = True
 
     def __del__(self):
         self.stop()
